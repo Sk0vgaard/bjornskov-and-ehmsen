@@ -1,0 +1,30 @@
+<mat-tab-group>
+  <mat-tab label="Home" routerLinkActive="active">
+    <ng-template mat-tab-label>
+      <mat-icon>home</mat-icon>
+      Forside
+    </ng-template>
+    <app-home></app-home>
+  </mat-tab>
+  <mat-tab label="Images" routerLinkActive="active">
+    <ng-template mat-tab-label>
+      <mat-icon>image</mat-icon>
+      Billeder
+    </ng-template>
+    <app-images></app-images>
+  </mat-tab>
+  <mat-tab label="About Us" routerLinkActive="active">
+    <ng-template mat-tab-label>
+      <mat-icon>info</mat-icon>
+      Om Os
+    </ng-template>
+    <app-about-us></app-about-us>
+  </mat-tab>
+  <mat-tab label="Contact Us" routerLinkActive="active">
+    <ng-template mat-tab-label>
+      <mat-icon>info</mat-icon>
+      Kontakt os
+    </ng-template>
+    <app-contact-us></app-contact-us>
+  </mat-tab>
+</mat-tab-group>
