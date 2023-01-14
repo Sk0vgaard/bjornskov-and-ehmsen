@@ -1,7 +1,13 @@
 <mat-toolbar color="primary">
-  <span>Angular Material App With Tab and Routing </span>
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
+  <div class="container">
+    <div class="display-flex">
+      <img class="logo" src="assets/icons/B&E_web.png" alt="">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="BE-logo">
+      <img class="logo" src="assets/icons/B&E_logo.png" alt="">
+    </div>
+  </div>
 </mat-toolbar>
-<app-header></app-header>
+<app-navigation></app-navigation>
 <router-outlet></router-outlet>

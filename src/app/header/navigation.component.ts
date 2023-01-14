@@ -9,9 +9,20 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule, RouterLink, MatIconModule, MatTabsModule, RouterLinkActive, RouterOutlet, HomeComponent, ImagesComponent, AboutUsComponent, ContactUsComponent],
+  imports: [
+    CommonModule,
+    RouterLink,
+    MatIconModule,
+    MatTabsModule,
+    RouterLinkActive,
+    RouterOutlet,
+    HomeComponent,
+    ImagesComponent,
+    AboutUsComponent,
+    ContactUsComponent
+  ],
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

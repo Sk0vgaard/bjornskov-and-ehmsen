@@ -16,15 +16,15 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ContactFormComponent {
 
-  contactForm = new FormGroup({
+  constructor() {
+  }
+
+  public contactForm = new FormGroup({
     name: new FormControl('', Validators.required),
     phoneNumber: new FormControl('', [Validators.required, Validators.pattern('^[0-9]*$')]),
     email: new FormControl('', [Validators.required, Validators.email]),
     message: new FormControl('')
   });
-
-  constructor() {
-  }
 
   public onSubmit() {
     console.log(this.contactForm.value);

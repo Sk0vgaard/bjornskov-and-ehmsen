@@ -1,0 +1,18 @@
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  height: 75px;
+  margin-right: 10px;
+}
+
+.toolbar-title {
+  padding-left: 100px;
+  font-size: 3em;
+  font-weight: 500;
+  color: white;
+  align-self: center;
+}

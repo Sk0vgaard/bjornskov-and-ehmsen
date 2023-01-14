@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bjornskov_og_ehmsen';
+  title = '- Bedre bliver det ikke';
 
 }
