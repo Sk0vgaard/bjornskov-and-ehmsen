@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
   imports: [CommonModule, MatFormFieldModule, FormsModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatCardModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactFormComponent {
 

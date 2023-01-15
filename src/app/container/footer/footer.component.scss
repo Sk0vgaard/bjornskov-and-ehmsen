@@ -16,7 +16,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* divide the grid into three equal columns */
   grid-gap: 1em; /* add a gap between columns */
-  padding: 1em;
 }
 
 mat-list-item {

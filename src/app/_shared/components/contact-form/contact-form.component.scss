@@ -20,4 +20,15 @@ mat-card-header {
 mat-card {
   width: 60%;
   margin: 20px;
+  background: transparent;
+}
+
+.form-label {
+  color: black;
+}
+
+.disabled-button:disabled {
+  background-color: #212121;
+  color: lightgray;
+  opacity: 0.4;
 }

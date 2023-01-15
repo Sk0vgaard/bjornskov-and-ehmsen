@@ -1,0 +1,18 @@
+.background {
+  background-color: #F39200;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 45%; /* adjust as needed */
+  margin: 0 10px; /* adjust as needed */
+}
+
+.remove-margin-top {
+  margin-top: 0;
+}
