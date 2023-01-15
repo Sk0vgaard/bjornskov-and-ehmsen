@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class FooterComponent {
   phoneNumber: string = '+45 22 33 76 08';
   email: string = 'mark@bjørnskov-ehmsen.dk';
+  cvr: string = '41701048';
   firmName: string = 'Bjørnskov & Ehmsen tømrer og snedker';
   address: string = 'Hededammen 9, 6705 Esbjerg Ø';
 

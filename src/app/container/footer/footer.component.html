@@ -5,7 +5,7 @@
         <h3 class="mat-h3">Kontakt os</h3>
         <mat-list>
           <mat-list-item>
-            <div class="align-contact" (click)="callPhoneNo()">
+            <div class="align-contact pointer" (click)="callPhoneNo()">
               <mat-icon class="text-color">phone</mat-icon>
               <span class="text-color">
             Tlf.: {{phoneNumber}}
@@ -13,7 +13,7 @@
             </div>
           </mat-list-item>
           <mat-list-item>
-            <div class="align-contact" (click)="mailTo()">
+            <div class="align-contact pointer" (click)="mailTo()">
               <mat-icon class="text-color">email</mat-icon>
               <span class="text-color">
             E-Mail: {{email}}
@@ -21,7 +21,7 @@
             </div>
           </mat-list-item>
           <mat-list-item>
-            <div class="align-contact" (click)="navigateToAddress()">
+            <div class="align-contact pointer" (click)="navigateToAddress()">
               <mat-icon class="text-color">place</mat-icon>
               <span class="text-color">
                 <span>
@@ -31,6 +31,15 @@
                 <span style="display: flex">
                 {{address}}
                 </span>
+            </span>
+            </div>
+          </mat-list-item>
+
+          <mat-list-item>
+            <div class="align-contact">
+              <mat-icon class="text-color">home</mat-icon>
+              <span class="text-color">
+            CVR: {{cvr}}
             </span>
             </div>
           </mat-list-item>
@@ -57,6 +66,33 @@
               <mat-icon svgIcon="instagram"></mat-icon>
               Instagram
             </button>
+          </mat-list-item>
+        </mat-list>
+      </div>
+
+      <div class="footer-grid-item">
+        <h3 class="mat-h3">Åbningstider</h3>
+        <mat-list>
+          <mat-list-item>
+            <div class="align-contact">
+              <mat-icon class="text-color">access_time_filled</mat-icon>
+              <span class="text-color">
+                Mandag - Fredag
+                <br>
+                07:00 - 16
+            </span>
+            </div>
+          </mat-list-item>
+          <br>
+          <mat-list-item>
+            <div class="align-contact">
+              <mat-icon class="text-color">access_time_filled</mat-icon>
+              <span class="text-color">
+                Lørdag - Søndag
+                <br>
+                Lukket
+            </span>
+            </div>
           </mat-list-item>
         </mat-list>
       </div>

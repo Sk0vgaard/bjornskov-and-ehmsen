@@ -2,10 +2,8 @@
   height: 15rem;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* divide the grid into two equal columns */
-  grid-gap: 20px; /* add a gap between columns */
+.mat-h3 {
+  padding-top: 15px;
 }
 
 /* style the grid items */
@@ -16,13 +14,9 @@
 
 .footer-grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
+  grid-template-columns: repeat(3, 1fr); /* divide the grid into three equal columns */
+  grid-gap: 1em; /* add a gap between columns */
   padding: 1em;
-}
-
-.footer-grid-item {
-  text-align: center;
 }
 
 mat-list-item {
@@ -36,8 +30,12 @@ mat-list-item {
 .align-contact {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
   mat-icon {
     padding-right: 5px;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }
