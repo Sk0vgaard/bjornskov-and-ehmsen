@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactFormComponent } from '../../_shared/components/contact-form/contact-form.component';
+import { ContactFormComponent } from '../../../_shared/components/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact-us',

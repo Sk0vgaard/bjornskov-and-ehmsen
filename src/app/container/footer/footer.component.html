@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="mat-toolbar-footer">
+    <div class="footer-grid-container">
+      <div class="footer-grid-item">
+        <h3 class="mat-h3">Kontakt os</h3>
+        <mat-list>
+          <mat-list-item>
+            <div class="align-contact" (click)="callPhoneNo()">
+              <mat-icon class="text-color">phone</mat-icon>
+              <span class="text-color">
+            Tlf.: {{phoneNumber}}
+            </span>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="align-contact" (click)="mailTo()">
+              <mat-icon class="text-color">email</mat-icon>
+              <span class="text-color">
+            E-Mail: {{email}}
+            </span>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="align-contact" (click)="navigateToAddress()">
+              <mat-icon class="text-color">place</mat-icon>
+              <span class="text-color">
+                <span>
+                {{firmName}}
+                </span>
+                <br>
+                <span style="display: flex">
+                {{address}}
+                </span>
+            </span>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+
+      <div class="footer-grid-item">
+        <h3 class="mat-h3">Følg os</h3>
+        <mat-list>
+          <mat-list-item>
+            <button mat-raised-button color="accent">
+              <mat-icon class="mat-icon-size">facebook</mat-icon>
+              Facebook
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-raised-button color="accent">
+              <mat-icon svgIcon="linkedin"></mat-icon>
+              LinkedIn
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-raised-button color="accent">
+              <mat-icon svgIcon="instagram"></mat-icon>
+              Instagram
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavigationComponent } from './header/navigation.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './container/header/header.component';
+import { FooterComponent } from './container/footer/footer.component';
+import { NavigationComponent } from './container/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatTabsModule,
     MatButtonModule,
+    HttpClientModule,
+    HeaderComponent,
     NavigationComponent,
-    MatToolbarModule,
-    MatIconModule,
-    MatListModule,
-    HttpClientModule
+    FooterComponent
   ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}

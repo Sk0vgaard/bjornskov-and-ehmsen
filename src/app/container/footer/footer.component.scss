@@ -1,0 +1,43 @@
+.mat-toolbar-footer {
+  height: 15rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* divide the grid into two equal columns */
+  grid-gap: 20px; /* add a gap between columns */
+}
+
+/* style the grid items */
+.footer-grid-item {
+  align-items: center; /* center the content vertically */
+  text-align: center; /* center the text */
+}
+
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+.footer-grid-item {
+  text-align: center;
+}
+
+mat-list-item {
+  color: white;
+}
+
+.text-color {
+  color: #F39200;
+}
+
+.align-contact {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  mat-icon {
+    padding-right: 5px;
+  }
+}
