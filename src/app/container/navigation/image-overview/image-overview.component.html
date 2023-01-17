@@ -1,0 +1,16 @@
+<div class="image-container background-color">
+  <swiper [config]="config">
+    <ng-container *ngFor="let image of images; index as i">
+      <ng-template swiperSlide>
+        <mat-card class="image-card" (click)="loadImageDetails(image.id)">
+          <mat-card-title>{{image.title}}</mat-card-title>
+          <img [src]="image.url" class="image-content" alt="image-content">
+          <mat-card-content>
+            <p>{{image.description}}</p>
+          </mat-card-content>
+        </mat-card>
+      </ng-template>
+    </ng-container>
+  </swiper>
+</div>
+

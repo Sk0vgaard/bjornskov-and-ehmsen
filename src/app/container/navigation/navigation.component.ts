@@ -4,9 +4,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
-import { ImagesComponent } from './images/images.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ImageOverviewComponent } from './image-overview/image-overview.component';
 
 @Component({
   selector: 'app-navigation',
@@ -19,9 +19,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     RouterLinkActive,
     RouterOutlet,
     HomeComponent,
-    ImagesComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ImageOverviewComponent
   ],
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
