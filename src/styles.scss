@@ -31,7 +31,7 @@ html {
   font-family: 'Roboto', sans-serif; /* sets all the fonts to use Roboto */
 }
 
-.background {
+.background-color {
   background-color: #F39200;
 }
 
@@ -41,6 +41,10 @@ html {
 }
 
 .primary-color {
+  background-color: #212121;
+}
+
+.secondary-color {
   background-color: #EB7700 !important;
 }
 
