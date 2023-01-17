@@ -3,10 +3,12 @@
     <ng-container *ngFor="let image of images; index as i">
       <ng-template swiperSlide>
         <mat-card class="image-card" (click)="openImageCategoryDialog(image.category)">
-          <mat-card-title>{{image.title}}</mat-card-title>
+          <mat-card-title class="primary-color">
+            <p class="text-color">{{image.title}}</p>
+          </mat-card-title>
           <img [src]="image.url" class="image-content" alt="image-content">
-          <mat-card-content>
-            <p>{{image.description}}</p>
+          <mat-card-content class="primary-color">
+            <p class="text-color">{{image.description}}</p>
           </mat-card-content>
         </mat-card>
       </ng-template>
