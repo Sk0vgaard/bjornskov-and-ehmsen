@@ -1,24 +1,25 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { ImageRoutingModule } from './image-routing.module';
 import { SwiperModule } from 'swiper/angular';
-import SwiperCore, { A11y, Navigation, Pagination, Scrollbar, SwiperOptions } from 'swiper';
+import SwiperCore, { FreeMode, Navigation, SwiperOptions, Thumbs } from 'swiper';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ImagesComponent } from './images/images.component';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([FreeMode, Navigation, Thumbs]);
 
 interface Image {
   id: number;
   title: string;
   url: string;
   description: string;
+  category: string;
 }
 
 @Component({
   selector: 'app-image-overview',
   standalone: true,
-  imports: [CommonModule, MatCardModule, ImageRoutingModule, SwiperModule],
+  imports: [CommonModule, MatCardModule, SwiperModule, MatDialogModule],
   templateUrl: './image-overview.component.html',
   styleUrls: ['./image-overview.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -30,38 +31,40 @@ export class ImageOverviewComponent {
       id: 1,
       title: 'Image 1',
       url: 'assets/images/120034608_2708637782718165_7918138857527630262_n.jpg',
-      description: 'Image 1 Description'
+      description: 'Image 1 Description',
+      category: 'floor'
     },
     {
       id: 2,
       title: 'Image 2',
       url: 'assets/images/122550057_3537125253001989_7221914740336158703_n.jpg',
-      description: 'Image 2 Description'
+      description: 'Image 2 Description',
+      category: 'window'
     },
     {
       id: 3,
       title: 'Image 3',
       url: 'https://via.placeholder.com/250x300',
-      description: 'Image 3 Description'
+      description: 'Image 3 Description',
+      category: 'door'
     },
     {
       id: 4,
       title: 'Image 4',
       url: 'assets/images/311462781_1996719743854758_4004257398874546759_n.jpg',
-      description: 'Image 4 Description'
+      description: 'Image 4 Description',
+      category: 'roof'
     },
     {
       id: 5,
       title: 'Image 5',
       url: 'assets/images/120034608_2708637782718165_7918138857527630262_n.jpg',
-      description: 'Image 5 Description'
+      description: 'Image 5 Description',
+      category: 'extension'
     }
   ];
 
-  constructor(private router: Router) {
-  }
-
-  ngOnInit(): void {
+  constructor(private dialog: MatDialog) {
   }
 
   config: SwiperOptions = {
@@ -74,7 +77,11 @@ export class ImageOverviewComponent {
     scrollbar: {draggable: true},
   };
 
-  loadImageDetails(id: number) {
-    this.router.navigate(['image-details', id]);
+  openImageCategoryDialog(category: string) {
+    const imagesByCategory = this.images.filter(image => image.category === category);
+    this.dialog.open(ImagesComponent, {
+      data: {images: imagesByCategory},
+      panelClass: 'fullscreen-dialog'
+    });
   }
 }
