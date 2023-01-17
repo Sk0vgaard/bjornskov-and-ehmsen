@@ -2,7 +2,7 @@
   <swiper [config]="config">
     <ng-container *ngFor="let image of images; index as i">
       <ng-template swiperSlide>
-        <mat-card class="image-card" (click)="openImageCategoryDialog(image.category)">
+        <mat-card class="image-card" (click)="openImageCategoryDialog(image.category, $event)">
           <mat-card-title class="primary-color">
             <p class="text-color">{{image.title}}</p>
           </mat-card-title>

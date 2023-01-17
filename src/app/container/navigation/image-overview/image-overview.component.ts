@@ -75,7 +75,8 @@ export class ImageOverviewComponent {
     scrollbar: {draggable: true},
   };
 
-  openImageCategoryDialog(category: string) {
+  openImageCategoryDialog(category: string, $event: Event) {
+    $event.stopPropagation();
     const imagesByCategory = this.images.filter(image => image.category === category);
     this.dialog.open(ImagesComponent, {
       data: {images: imagesByCategory},

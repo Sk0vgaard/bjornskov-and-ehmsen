@@ -15,6 +15,7 @@
   //height: 250px;
   width: 200px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .image-content {
@@ -24,6 +25,10 @@
 }
 
 mat-card-title {
+  text-align: center;
+}
+
+mat-card-content {
   text-align: center;
 }
 
@@ -58,6 +63,14 @@ mat-card-title {
   width: 80px;
   height: 80px;
   border-radius: 100%;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.swiper-button-disabled {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .image-container {
@@ -68,3 +81,4 @@ mat-card-title {
   height: 500px; /* or any other desired height */
   overflow: hidden;
 }
+
