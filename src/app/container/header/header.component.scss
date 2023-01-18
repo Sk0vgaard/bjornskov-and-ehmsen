@@ -1,31 +1,15 @@
-.mat-toolbar-header {
-  height: 5rem;
+.left-image {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+  //height: 50px; /* adjust to your desired size */
+  //width: 50px; /* adjust to your desired size */
 }
 
-h1 {
-  padding-left: 20px;
-  font-size: 2rem;
-  display: flex;
-}
-
-.container {
-  display: flex;
-  width: 100vw;
-  justify-content: space-between;
-}
-
-img {
-  max-height: 4.5rem;
-}
-
-.display-flex {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.BE-logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.right-image {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  height: 60px; /* adjust to your desired size */
+  width: 60px; /* adjust to your desired size */
 }
