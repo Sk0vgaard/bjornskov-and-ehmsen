@@ -1,14 +1,59 @@
 .card-container {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "mat-card"
+    "contact-form";
 }
 
-.card {
-  width: 45%; /* adjust as needed */
-  margin: 0 10px; /* adjust as needed */
+mat-card {
+  grid-area: mat-card;
 }
 
 .remove-margin-top {
   margin-top: 0;
 }
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .background-color {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "mat-card contact-form";
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-card-header {
+  padding-bottom: 15px;
+}
+
+mat-card {
+  margin: 20px;
+}
+
+.form-label {
+  color: black;
+}
+
+.contact-card {
+  padding: 20px;
+}
+
+.disabled-button:disabled {
+  background-color: #212121;
+  color: lightgray;
+  opacity: 0.4;
+}
+

@@ -1,10 +1,5 @@
-.about-us-section-container {
-  margin: 20px;
-}
-
 .about-us-section-title {
   text-align: center;
-  padding-top: 40px;
   padding-bottom: 20px;
   margin: 0;
 }
@@ -12,3 +7,14 @@
 .text-padding {
   padding: 20px;
 }
+
+.parent-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+mat-card {
+  grid-column: 1 / -1;
+}
+

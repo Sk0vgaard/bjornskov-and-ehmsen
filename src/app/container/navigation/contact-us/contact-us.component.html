@@ -1,5 +1,5 @@
 <div class="background-color card-container">
-  <div class="card">
+  <mat-card class="card secondary-color contact-card">
     <h1 class="remove-margin-top">
       Kontakt os
     </h1>
@@ -8,8 +8,50 @@
       <br>
       Så ring gerne til os allerede i dag eller send os en mail. Så gør vi vores til for at hjælpe dig hurtigst muligt.
     </h3>
+  </mat-card>
+
+  <div class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <mat-card class="secondary-color mat-elevation-z0">
+        <mat-card-header>
+          <mat-card-title><b>Kontakt info</b></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field class="full-width">
+            <mat-label class="form-label">Navn</mat-label>
+            <input matInput formControlName="name" name="name" required>
+            <mat-error *ngIf="name?.invalid && name?.touched">Navn skal være udfyldt</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label class="form-label">Telefonnummer</mat-label>
+            <input matInput formControlName="phoneNumber" required class="example-form-input">
+            <mat-error class="example-form-error" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">Telefonnummer skal være udfyldt og må kun indeholde tal</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label class="form-label">E-Mail</mat-label>
+            <input matInput formControlName="email" required>
+            <mat-error *ngIf="email?.invalid && email?.touched">E-Mail skal være udfyldt korrekt</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label class="form-label">Emne</mat-label>
+            <input matInput formControlName="subject" required>
+            <mat-error *ngIf="subject?.invalid && subject?.touched">Emnet skal være udfyldt korrekt</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label class="form-label">Besked</mat-label>
+            <textarea matInput formControlName="message"></textarea>
+          </mat-form-field>
+          <mat-card-actions>
+            <button class="disabled-button" mat-raised-button color="primary" [disabled]="contactForm.invalid">Send</button>
+          </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
+    </form>
   </div>
 
-  <app-contact-form class="card"></app-contact-form>
 </div>
 
