@@ -1,101 +1,74 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row class="mat-toolbar-footer">
-    <div class="footer-grid-container">
-      <div class="footer-grid-item">
-        <h3 class="mat-h3">Kontakt os</h3>
-        <mat-list>
-          <mat-list-item>
-            <div class="align-contact pointer" (click)="callPhoneNo()">
-              <mat-icon class="text-color">phone</mat-icon>
-              <span class="text-color">
-            Tlf.: {{phoneNumber}}
-            </span>
-            </div>
-          </mat-list-item>
-          <mat-list-item>
-            <div class="align-contact pointer" (click)="mailTo()">
-              <mat-icon class="text-color">email</mat-icon>
-              <span class="text-color">
-            E-Mail: {{email}}
-            </span>
-            </div>
-          </mat-list-item>
-          <mat-list-item>
-            <div class="align-contact pointer" (click)="navigateToAddress()">
-              <mat-icon class="text-color">place</mat-icon>
-              <span class="text-color">
-                <span>
-                {{firmName}}
-                </span>
-                <br>
-                <span style="display: flex">
-                {{address}}
-                </span>
-            </span>
-            </div>
-          </mat-list-item>
+  <mat-toolbar-row>
+    <mat-list>
+      <h3 mat-subheader>Kontakt os</h3>
+      <mat-list-item>
+        <div class="align-contact pointer" (click)="callPhoneNo()">
+          <mat-icon>phone</mat-icon>
+          <span class="mat-list-item-content">{{phoneNumber}}</span>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div class="align-contact pointer" (click)="mailTo()">
+          <mat-icon>email</mat-icon>
+          <span class="mat-list-item-content">{{email}}</span>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div class="align-contact pointer" (click)="navigateToAddress()">
+          <mat-icon>place</mat-icon>
+          <span class="mat-list-item-content">{{firmName}} <br> {{address}}</span>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div class="align-contact pointer">
+          <mat-icon>home</mat-icon>
+          <span class="mat-list-item-content">CVR: {{cvr}}</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+<!--    <mat-list>-->
+<!--      <h3 mat-subheader>Følg os</h3>-->
+<!--      <mat-list-item>-->
+<!--        <button mat-icon-button>-->
+<!--          <mat-icon>facebook</mat-icon>-->
+<!--        </button>-->
+<!--        <button mat-icon-button>-->
+<!--          <mat-icon svgIcon="instagram"></mat-icon>-->
+<!--        </button>-->
+<!--        <button mat-icon-button>-->
+<!--          <mat-icon svgIcon="linkedin"></mat-icon>-->
+<!--        </button>-->
+<!--      </mat-list-item>-->
+<!--    </mat-list>-->
 
-          <mat-list-item>
-            <div class="align-contact">
-              <mat-icon class="text-color">home</mat-icon>
-              <span class="text-color">
-            CVR: {{cvr}}
-            </span>
-            </div>
-          </mat-list-item>
-        </mat-list>
-      </div>
+    <mat-list>
+      <h3>Åbningstider</h3>
+      <mat-list-item>
+        <div class="align-contact" style="padding-top: 10px">
+          <mat-icon>schedule</mat-icon>
+          <span class="mat-list-item-content">Mandag - Fredag <br> 07:00 - 16:00</span>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div class="align-contact" style="padding-top: 10px">
+          <mat-icon>schedule</mat-icon>
+          <span class="mat-list-item-content">Lørdag - Søndag <br> Lukket</span>
+        </div>
+      </mat-list-item>
 
-      <div class="footer-grid-item">
-        <h3 class="mat-h3">Følg os</h3>
-        <mat-list>
-          <mat-list-item>
-            <button mat-raised-button color="accent">
-              <mat-icon class="mat-icon-size">facebook</mat-icon>
-              Facebook
-            </button>
-          </mat-list-item>
-          <mat-list-item>
-            <button mat-raised-button color="accent">
-              <mat-icon svgIcon="linkedin"></mat-icon>
-              LinkedIn
-            </button>
-          </mat-list-item>
-          <mat-list-item>
-            <button mat-raised-button color="accent">
-              <mat-icon svgIcon="instagram"></mat-icon>
-              Instagram
-            </button>
-          </mat-list-item>
-        </mat-list>
-      </div>
-
-      <div class="footer-grid-item">
-        <h3 class="mat-h3">Åbningstider</h3>
-        <mat-list>
-          <mat-list-item>
-            <div class="align-contact">
-              <mat-icon class="text-color">access_time_filled</mat-icon>
-              <span class="text-color">
-                Mandag - Fredag
-                <br>
-                07:00 - 16:00
-            </span>
-            </div>
-          </mat-list-item>
-          <br>
-          <mat-list-item>
-            <div class="align-contact">
-              <mat-icon class="text-color">access_time_filled</mat-icon>
-              <span class="text-color">
-                Lørdag - Søndag
-                <br>
-                Lukket
-            </span>
-            </div>
-          </mat-list-item>
-        </mat-list>
-      </div>
-    </div>
+      <h3 mat-subheader style="padding-top: 20px">Følg os</h3>
+      <mat-list-item>
+        <button mat-icon-button (click)="openFacebook()">
+          <mat-icon>facebook</mat-icon>
+        </button>
+        <button mat-icon-button (click)="openInstagram()">
+          <mat-icon svgIcon="instagram"></mat-icon>
+        </button>
+        <button mat-icon-button (click)="openLinkedIn()">
+          <mat-icon svgIcon="linkedin"></mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
   </mat-toolbar-row>
 </mat-toolbar>
