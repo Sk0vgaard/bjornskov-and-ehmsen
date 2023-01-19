@@ -32,7 +32,7 @@ export class FooterComponent {
     private domSanitizer: DomSanitizer
   ) {
     this.matIconRegistry
-      .addSvgIcon('linkedin', this.setPath(`${(this.iconPath)}/linkedin.svg`))
+      .addSvgIcon('linkedin', this.setPath(`https://github.com/Sk0vgaard/bjornskov-and-ehmsen/blob/a7477aa0d0614314298b051083bc0131a1361a9e/docs/assets/icons/linkedin.svg`))
       .addSvgIcon('instagram', this.setPath(`${(this.iconPath)}/instagram.svg`));
   }
 
