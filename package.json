@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:prod": "ng build --configuration production",
-    "build:ghp": "ng build --configuration production --deploy-url=https://$GITHUB_USER.github.io/$PROJECT/ --base-href=/$PROJECT",
+    "build:ghp": "ng build --configuration production --deploy-url=https://sk0vgaard.github.io/bjornskov-and-ehmsen/ --base-href=https://sk0vgaard.github.io/bjornskov-and-ehmsen/",
     "homepage": "."
   },
   "private": true,
