@@ -25,7 +25,7 @@ export class FooterComponent {
   instagramUrl: string = '';
   linkedinUrl: string = '';
 
-  private iconPath: string = '../../assets/icons';
+  private iconPath: string = 'assets/icons';
 
   constructor(
     private matIconRegistry: MatIconRegistry,
