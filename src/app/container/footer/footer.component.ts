@@ -21,11 +21,11 @@ export class FooterComponent {
   cvr: string = '41701048';
   firmName: string = 'Bjørnskov & Ehmsen tømrer og snedker';
   address: string = 'Hededammen 9, 6705 Esbjerg Ø';
-  facebookUrl: string = '';
-  instagramUrl: string = '';
-  linkedinUrl: string = '';
+  facebookUrl: string = 'https://www.facebook.com/';
+  instagramUrl: string = 'https://www.instagram.com/';
+  linkedinUrl: string = 'https://www.linkedin.com/feed/';
 
-  private iconPath: string = 'assets/icons';
+  private iconPath: string = '/assets/icons';
 
   constructor(
     private matIconRegistry: MatIconRegistry,
